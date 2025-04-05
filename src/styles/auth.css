@@ -1,0 +1,36 @@
+/* In your auth.css file */
+
+.auth-submit {
+  color: white; /* Normal text color is white */
+  background: transparent; /* Transparent background */
+  background-image: linear-gradient(to top right, transparent, rgba(121, 121, 121, 0.16), transparent); /* Gradient background */
+  border-radius: 0.375rem; /* Equivalent to rounded-md (medium) */
+  padding: 0.5rem 1.5rem; /* Padding: 2 for top/bottom (py-2) and 6 for left/right (px-6) */
+  width: 100%; /* Ensures the button is full width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Default shadow */
+  transition: all 0.7s; /* Transition duration of 700ms */
+}
+
+/* Hover effect for text color and glow */
+.auth-submit:hover {
+  color: rgba(0, 255, 255, 1); /* Text color changes to cyan on hover */
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.7); /* Glow effect with cyan */
+  text-shadow: 0 0 8px rgba(0, 255, 255, 1); /* Glow effect for the text itself */
+}
+
+/* Backdrop blur effect (requires backdrop-filter support) */
+.auth-submit::before {
+  content: ''; /* Empty content for backdrop effect */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit; /* Inherit the gradient background */
+  backdrop-filter: blur(10px); /* Apply blur effect to the backdrop */
+  border-radius: inherit; /* Make sure the border-radius applies */
+  z-index: -1; /* Ensure it stays in the background */
+}
+
+
+/* w-full bg-[#00ffff] text-black font-semibold rounded-lg p-3 hover:bg-[#00cccc] transition-colors disabled:opacity-50 disabled:cursor-not-allowed */
